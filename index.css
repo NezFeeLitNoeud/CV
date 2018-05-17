@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  background-color: #3c4964;
+
+}
+
+h1 {
+  text-align: center;
+  color: #941100;
+font-family: 'Roboto Mono', monospace;
+}
+
+h2 {
+  font-family: 'Roboto Mono', monospace;
+   text-align: center;
+  margin-top: -10px;
+  color: #941100;
+}
+
+ul {
+  list-style-type: none;
+  line-height: 20px;
+}
+
+
+p{
+  text-align: center;
+  line-height: 10px;
+}
+
+
+/* ---------------------- CORPS ET COLONNES ----------------------- */
+
+.presentation {
+flex: 1;
+background-color: white;
+  margin-right: 20px;
+}
+
+.experience {
+
+  flex: 2;
+  background-color: white;
+  margin-left: 20px;
+}
+
+.formation {
+  flex: 2;
+  background-color: white;
+}
+
+.row {
+  padding: 30px;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+
+}
+
+
+/* ----------------- PRESENTATION ----------------- */
+
+.prenom {
+  border: none;
+}
+
+.mail {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: bold;
+  padding-top: 10%;
+  width: 5%;
+  margin-left:40%;
+  color: #941100;
+}
+
+.adresse, .tel {
+  font-family: 'Roboto Mono', monospace;
+  color: #941100;
+  font-weight: bold;
+  padding-top: 5%;
+   width: 5%;
+   margin-left:40%;
+}
+
+#autre {
+    margin-top: 8%;
+}
+
+.hidden, .hidden1, .hidden2 {
+  display: none;
+ text-align: center;
+}
+
+.mail:hover + .hidden {
+  display: block;
+}
+
+.adresse:hover + .hidden1 {
+  display: block;
+}
+
+.tel:hover + .hidden2 {
+  display: block;
+}
+
+
+/* IMAGE */
+
+img {
+  height: 25%;
+  width: 60%;
+  margin-left: 20%;
+}
+
+ #anglais {
+  height: 5%;
+  width: 15%;
+  margin-top: 12%;
+}
+
+.carre {
+position: absolute;
+width: 20px;
+height: 20px;
+  background-color: green;
+  margin-left: 8%;
+  margin-top: -2%;
+ }
+
+.carre1 {
+position: absolute;
+  width: 20px;
+height: 20px;
+  background-color: green;
+  margin-left: 9.4%;
+  margin-top: -2%;
+}
+
+.carre2 {
+  position: absolute;
+  width: 20px;
+height: 20px;
+  background-color: green;
+  margin-left: 10.8%;
+  margin-top: -2%;
+}
+
+.carre3 {
+  position: absolute;
+  width: 20px;
+height: 20px;
+  background-color: green;
+  margin-left: 12.2%;
+  margin-top: -2%;
+}
+
+
+#esp { 
+    height: 5%;
+  width: 15%;
+  margin-top: 10%;
+ }
+
+.c {
+    position: absolute;
+  width: 20px;
+height: 20px;
+  background-color: green;
+  margin-left: 8%;
+  margin-top: -2%;
+}
+
+.c1 {
+position: absolute;
+  width: 20px;
+height: 20px;
+  background-color: #c83b28;
+  margin-left: 9.4%;
+  margin-top: -2%;
+}
+.c2 {
+  position: absolute;
+  width: 20px;
+height: 20px;
+  background-color: #c83b28;
+  margin-left: 10.8%;
+  margin-top: -2%;
+}
+
+.c3 {
+  position: absolute;
+  width: 20px;
+height: 20px;
+  background-color: #c83b28;
+  margin-left: 12.2%;
+  margin-top: -2%;
+}
+
+
+/* ----------------- FORMATION ----------------- */
+
+#formation {
+  line-height: 50px;
+
+}
+
+
+#projet {
+   border-bottom: 1px black solid;
+}
+
+/* ----------------- EXPERIENCE ----------------- */
+
+.exp {
+
+background-color: transparent;
+font-size: 18px;
+cursor: pointer;
+margin-top: 40px;
+padding-left: 80px; 
+}
+
+.exp:hover {
+  color: #941100;
+}
+
+#xp1 {
+  margin-top: 5px;
+}
+
+
+/* ----------------- CONTENU JS ----------------- */
+.contenu {
+    display: none;
+    position: absolute;
+    width: 25%;
+    height: auto;
+    overflow: auto;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    margin-left: 5%;
+
+}
+
+
+.show {display:block;}
+
+.hide {display:none;}
+
+#canvas {
+
+  margin-top: -75px;
+}
+
+
+#canvas1 {
+  margin-top:-75px;
+}
+
+/* ----------------- ANIMATION LIEN ----------------- */
+
+.hover{
+  display: inline-block;
+  position: relative;
+  color: black;
+}
+
+.hover:before{
+  content: '' attr(data-hover-label) '';
+  position: absolute;
+  top: 0;
+  transform: rotateY(90deg);
+  transition: transform .1s linear;
+ 
+}
+
+.hover:hover:before, .hover:focus:before{
+  transition-delay: .2s;
+  transform: rotateY(0deg);
+  color:#941100;
+}
+
+.hover:hover .hover_label, .hover:focus .hover_label{
+  transform: rotateY(90deg);  
+  transition-delay: 0s
+
+}
+
+.hover_label{
+  display: inline-block;
+  transform: rotateY(0);
+  transition: transform .1s linear .2s;
+}
+
